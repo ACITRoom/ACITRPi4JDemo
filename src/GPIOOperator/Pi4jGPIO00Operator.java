@@ -5,6 +5,7 @@
 
 package GPIOOperator;
 
+import com.pi4j.io.gpio.GpioController;
 import com.pi4j.io.gpio.GpioFactory;
 import com.pi4j.io.gpio.GpioPinDigitalInput;
 import com.pi4j.io.gpio.GpioPinDigitalOutput;
@@ -135,10 +136,12 @@ public class Pi4jGPIO00Operator {
         return false;
     }      
     //======================================================================================================================================      
+    private final GpioController gpio = GpioFactory.getInstance();  
+    private  GpioPinDigitalOutput GPIOPinOutput = null;
     //======================================================================================================================================         
      public boolean GPIOOuputSetHighFun(){           
         try{
-            GpioPinDigitalOutput GPIOPinOutput = GpioFactory.getInstance().provisionDigitalOutputPin(RaspiPin.GPIO_00, "PIN", PinState.HIGH);   
+            GPIOPinOutput = gpio.provisionDigitalOutputPin(RaspiPin.GPIO_00, "PIN", PinState.HIGH);   
             GPIOPinOutput.setState(PinState.HIGH);           
             return true;
         }catch (Exception ex){

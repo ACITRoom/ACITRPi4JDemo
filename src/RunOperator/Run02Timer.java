@@ -15,7 +15,7 @@ import java.util.TimerTask;
  * @Version:1.0.0
  */
 
-public abstract class Run02Timer extends Run00Operator {
+public abstract class Run02Timer extends Run02GPIO {
 
    
    //========================================================================================================

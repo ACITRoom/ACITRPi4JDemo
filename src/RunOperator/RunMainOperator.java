@@ -18,8 +18,11 @@ public class RunMainOperator extends Run02Timer{
     public boolean InitialFun(){        
         try {
 
-
-          
+            //--------------------------------------------------------------------------------------------            
+            if (GPIOOperatorInitialFun() == false){
+                
+            }
+            
             //--------------------------------------------------------------------------------------------            
 
             return true;        

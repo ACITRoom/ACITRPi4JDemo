@@ -24,20 +24,5 @@ public abstract class Run00Operator {
        System.out.println(this.getClass().getSimpleName() +"_"+ MinorHeader +"_"+  MainTitle+"_"+ SubTitle+"_"+ MainMsg +"_"+ SubMsg);
     }   
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////    
-    //============================================================================================
-    private boolean ExampleFun(){        
-        try {
-
-
-
-            return true;        
-        }catch (Exception ex) {
-           
-        }
-        finally{
-        
-        }
-        return false;
-    }
-    //============================================================================================
+   
 }
