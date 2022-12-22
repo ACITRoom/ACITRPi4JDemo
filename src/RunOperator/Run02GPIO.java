@@ -24,14 +24,19 @@ public abstract class Run02GPIO extends Run00Operator {
     protected boolean GPIOOperatorInitialFun(){        
         try {
 
+            //-----------------------------------------------------------------------
             if (this.Pi4jGPIO00OperatorObj.GPIOOuputSetHighFun() == false){
-                
+                DebugLogFun(new Object(){}.getClass().getEnclosingMethod().getName(),
+               "Pi4jGPIO00OperatorObj",  "GPIOOuputSetHighFun","[ Failed ]","");   
+                return false;
             }
-
+              DebugLogFun(new Object(){}.getClass().getEnclosingMethod().getName(),
+               "Pi4jGPIO00OperatorObj",  "GPIOOuputSetHighFun","[% Success %]","");   
 
             return true;        
-        }catch (Exception ex) {
-           
+        }catch (SecurityException ex) {
+                  DebugLogFun(new Object(){}.getClass().getEnclosingMethod().getName(),
+               "Main",  "ST",ex.toString(), ex.getMessage());          
         }
         finally{
         

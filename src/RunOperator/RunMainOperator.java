@@ -22,7 +22,9 @@ public class RunMainOperator extends Run02Timer{
             if (GPIOOperatorInitialFun() == false){
                 
             }
-            
+            else {
+                
+            }
             //--------------------------------------------------------------------------------------------            
 
             return true;        
